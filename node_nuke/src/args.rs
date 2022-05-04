@@ -73,13 +73,13 @@ mod tests {
     #[test]
     fn when_get_node_modules_path() {
         // Arrange
-        let expected = env::current_dir().expect("Couldn't get CWD for some reason");
+        let expected = None;
         let data = Args {
-            path: None,
+            path: Some(PathBuf::from("/some/test/path")),
             remove_lock: true,
         };
         // Act
-        let actual = data.get_path();
+        let actual = data.get_node_modules_path();
         // Assert
         assert_eq!(actual, expected);
     }
