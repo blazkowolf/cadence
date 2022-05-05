@@ -2,11 +2,15 @@ use clap::Parser;
 use std::{env, path::PathBuf};
 
 #[derive(Parser)]
-#[clap(bin_name = "nn")]
+#[clap(name = "Node Nuke")]
+#[clap(bin_name = "nn", author, version, about, long_about = None)]
 pub struct Args {
+    /// Path to a directory containing a `node_modules` folder.
+    /// Defaults to the current directory if not provided.
     #[clap(parse(from_os_str))]
     path: Option<PathBuf>,
-
+    /// Remove all associated lock files
+    /// (e.g. `package-lock.json`, `yarn.lock`, `pnpm-lock.yaml`).
     #[clap(long, short = 'D')]
     pub remove_lock: bool,
 }
@@ -80,6 +84,20 @@ mod tests {
         };
         // Act
         let actual = data.get_node_modules_path();
+        // Assert
+        assert_eq!(actual, expected);
+    }
+
+    #[test]
+    fn when_get_lock_file_paths() {
+        // Arrange
+        let expected: Vec<PathBuf> = Vec::new();
+        let data = Args {
+            path: Some(PathBuf::from("/some/test/path")),
+            remove_lock: true,
+        };
+        // Act
+        let actual = data.get_lock_file_paths();
         // Assert
         assert_eq!(actual, expected);
     }

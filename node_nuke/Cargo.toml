@@ -1,5 +1,12 @@
 [package]
 name = "node_nuke"
+description = "Delete node_modules and associated lock files with extreme prejudice and swag 😎"
+authors = ["blazkowolf"]
+repository = "https://github.com/blazkowolf/cadence/node_nuke"
+readme = "README.md"
+license = "MIT"
+keywords = ["cli", "node", "node_modules"]
+categories = ["command-line-utilities", "filesystem"]
 version = "0.1.0"
 edition = "2021"
 
@@ -10,3 +17,7 @@ clap = { version = "3.1.12", features = ["derive"] }
 indicatif = "0.16.2"
 log = "0.4.16"
 pretty_env_logger = "0.4.0"
+
+[[bin]]
+name = "nn"
+path = "src/main.rs"
