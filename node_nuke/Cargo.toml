@@ -2,7 +2,7 @@
 name = "node_nuke"
 description = "Delete node_modules and associated lock files with extreme prejudice and swag 😎"
 authors = ["blazkowolf"]
-repository = "https://github.com/blazkowolf/cadence/node_nuke"
+repository = "https://github.com/blazkowolf/cadence/tree/main/node_nuke"
 readme = "README.md"
 license = "MIT"
 keywords = ["cli", "node", "node_modules"]
