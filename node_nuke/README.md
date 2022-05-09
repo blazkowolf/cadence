@@ -23,22 +23,30 @@ annihilating your `node_modules` and simultaneously fist bumping itself.
 
 ## Usage
 
-    USAGE:
-        nn [OPTIONS] [PATH]
+```
+nn [OPTIONS] [PATH]
+```
 
-    ARGS:
-        <PATH>    Path to a directory containing a `node_modules` folder. Defaults to the current
-                  directory if not provided
+### Args
 
-    OPTIONS:
-        -D, --remove-lock    Remove all associated lock files
-        -h, --help           Print help information
-        -V, --version        Print version information
+| Arg  | Desc                                                                                                       |
+| ---- | ---------------------------------------------------------------------------------------------------------- |
+| PATH | Path to a directory containing a `node_modules` folder. Defaults to the current directory if not provided. |
+
+### Options
+
+| Option              | Desc                             |
+| ------------------- | -------------------------------- |
+| `-D, --remove-lock` | Remove all associated lock files |
+| `-h, --help`        | Print help information           |
+| `-V, --version`     | Print version information        |
 
 ## FAQ
 
-- Q. What about other solutions like `rm -rf node_modules && rm package-lock.json`?
-  A. No
+> ❓ What about other solutions like `rm -rf node_modules && rm package-lock.json`?
 
-- Q. But `rd /s/q .\node_modules && del pack...`
-  A. _No_
+No
+
+> ❓ But `rd /s/q .\node_modules && del pack...`
+
+_No_
