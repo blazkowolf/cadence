@@ -1,6 +1,6 @@
 # Cadence
 
-<div style="text-align: center;">
+<div align="center">
 
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg?style=flat&logo=conventional-commits)](https://conventionalcommits.org)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?style=flat&logo=pre-commit)](https://github.com/pre-commit/pre-commit)
